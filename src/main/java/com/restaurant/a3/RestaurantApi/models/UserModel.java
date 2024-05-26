@@ -33,7 +33,7 @@ public class UserModel implements Serializable {
 //    Anotação para registrar o enum como string na base de dados
     @Enumerated(EnumType.STRING)
     @Column(name = "role", nullable = false,  length = 25)
-    private Role role = Role.ROLE_ADMIN;
+    private Role role = Role.ROLE_DEFAULT;
 
     @JsonIgnore
     @OneToMany(mappedBy = "user",  cascade = CascadeType.ALL)
